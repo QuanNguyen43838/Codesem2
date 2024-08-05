@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "kanit", sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.container {
+    max-width: 100%;
+    height: auto;
+    background-image: url(../img/image\ 8.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500%;
+}
+
+.my {
+    margin-bottom: 24px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col {
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 1;
+    border: 1px dashed red;
+}
+
+.col-1 {
+    flex: 0 0 8.33%;
+    max-width: 8.33%;
+}
+
+/* Cột chiếm 2/12 chiều rộng */
+.col-2 {
+    flex: 0 0 16.66%;
+    max-width: 16.66%;
+}
+
+/* Cột chiếm 3/12 chiều rộng */
+.col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+/* Cột chiếm 4/12 chiều rộng */
+.col-4 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+}
+
+/* Cột chiếm 5/12 chiều rộng */
+.col-5 {
+    flex: 0 0 41.66%;
+    max-width: 41.66%;
+}
+
+/* Cột chiếm 6/12 chiều rộng */
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+/* Cột chiếm 7/12 chiều rộng */
+.col-7 {
+    flex: 0 0 58.33%;
+    max-width: 58.33%;
+}
+
+/* Cột chiếm 8/12 chiều rộng */
+.col-8 {
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
+}
+
+/* Cột chiếm 9/12 chiều rộng */
+.col-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+/* Cột chiếm 10/12 chiều rộng */
+.col-10 {
+    flex: 0 0 83.33%;
+    max-width: 83.33%;
+}
+
+/* Cột chiếm 11/12 chiều rộng */
+.col-11 {
+    flex: 0 0 91.66%;
+    max-width: 91.66%;
+}
+
+/* Cột chiếm 12/12 chiều rộng */
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.logo {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    margin-bottom: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-right: 48px;
+}
+
+.navbar ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8px;
+    display: block;
+    width: 0;
+    height: 3px;
+    border-radius: 1px;
+    opacity: 0;
+    background-color: #9B24C5;
+    transition: all 0.3s linear;
+}
+
+.navbar ul li a:hover {
+    color: #9B24C5;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+    opacity: 1;
+    left: 0;
+    transform: translateX(0%);
+}
+
+.btn {
+    width: 125px;
+    height: 50px;
+    background: transparent;
+    color: white;
+    border: 1px solid #9B24C5;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 32px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-left: 20px;
+}
+
+.btn:hover {
+    background: #C700FF;
+}
+
+.title-web {
+    color: #fff;
+    margin-bottom: 48px;
+    margin-left: 20px;
+}
+
+.title-web p {
+    margin-bottom: 12px;
+}
+
+.supper-product {
+    display: flex;
+}
+
+.fillter-section {
+    position: relative;
+}
+
+.filter-category {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #fff;
+}
+
+.product-img img {
+    width: 70%;
+}
+
+.filter-category h4 {
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding-top 0.5s ease;
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+}
+
+.dropdown-menu ul li {
+    margin-bottom: 16px;
+}
+
+.dropdown-menu ul li input[type="checkbox"] {
+    display: none;
+    margin-right: 10px;
+}
+
+.filter-category.active .dropdown-menu {
+    display: block;
+    opacity: 1;
+    max-height: 500px;
+    padding-top: 16px;
+}
+
+.product {
+    margin-left: 10rem;
+}
+
+.product-card {
+    position: relative;
+    background-color: #252540;
+    padding: 20px 0px 0px 0px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 18px;
+    border: 1px solid white;
+}
+
+.product-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    cursor: pointer;
+    transition: 0.24s ease-in-out;
+}
+
+.product-btn a {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.product-btn:hover {
+    opacity: 0.8;
+}
+
+.product-info {
+    color: white;
+}
+
+.product-info h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+footer {
+    border-top: 1px solid white;
+    padding: 32px 0px;
+    color: white;
+}
+
+.footer-container {
+    margin: 0px 192px;
+}
+
+.footer-container .f-1 {
+    border-right: 1px solid white;
+}
+
+.footer-container .f-1 h1 {
+    margin-bottom: 16px;
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.footer-container .f-1 .title {
+    line-height: 150%;
+    margin-bottom: 16px;
+}
+
+.footer-container .f-1 .address {
+    line-height: 150%;
+}
+
+.footer-container .f-1 .address p {
+    margin-bottom: 8px;
+}
+
+.footer-container .f-2 h1 {
+    margin-bottom: 16px;
+    font-size: 42px;
+}
+
+
+.footer-container .f-2 {
+    padding-left: 36px;
+    border-right: 1px solid white;
+}
+
+.footer-container .f-2 ul {
+    list-style: none;
+}
+
+.footer-container .f-2 ul li {
+    margin-bottom: 16px;
+}
+
+.footer-container .f-2 ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: 200;
+    transition: 0.3s ease-in-out;
+}
+
+.footer-container .f-2 ul li a:hover {
+    color: #C700FF;
+}
+
+.footer-container .f-3 {
+    padding-left: 36px;
+}
+
+.footer-container .f-3 h1 {
+    margin-bottom: 16px;
+    font-size: 42px;
+}
+
+.footer-container .f-3 p {
+    font-size: 24px;
+    font-weight: 200;
+    margin-bottom: 16px;
+}
+
+.mail {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.footer-container .f-3 input[type="text"] {
+    color: white;
+    font-size: 16px;
+    background: none;
+    width: 70%;
+    padding: 4px 0px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+}
+
+.footer-container .f-3 .mail img {
+    position: absolute;
+    right: 28%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.footer-container .f-3 img {
+    margin-right: 12px;
+    cursor: pointer;
+}

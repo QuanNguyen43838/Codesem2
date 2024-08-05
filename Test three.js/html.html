@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/Custom.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three/build/three.module.js"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <main id="main-container">
+        <div class="color-picker-panel">
+            <div class="color-selection">
+                <div class="color-preview">
+                    <div type="button" id="last-color"></div>
+                    <div id="current-color"></div>
+                </div>
+
+                <div class="color-palette-container">
+                    <canvas id="color-palette"></canvas>
+                    <div id="color-cursor"></div>
+
+                    <div class="color-choose">
+                        <canvas id="hue-column"></canvas>
+                        <div id="hue-cursor"></div>
+                    </div>
+                </div>
+
+                <!-- <div class="color-opacity"> -->
+                <!-- <canvas id="opacity-column"></canvas> -->
+                <!-- <div id="opacity-cursor"></div> -->
+                <!-- </div> -->
+            </div>
+
+            <div class="color-interact">
+                <input class="color-result" value="" type="text" name="" id="">
+                <button id="corlor-type active" type="button" >HEXA</button>
+                <button id="corlor-type" type="button">RGBA</button>
+            </div>
+        </div>
+    </main>
+    <div class="slide-bar">
+        <div class="color-picker">
+            <button id="color-button" type="button"></button>
+        </div>
+    </div>
+
+    <script type="module" src="./js/colorPicker.js"></script>
+    <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>
